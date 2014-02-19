@@ -21,13 +21,14 @@ added folders and files (content of zip-archive)
  
 ------------------
  
-download the attached zip-archive  and extract the file(s) from client-folder into your missionfolder. 
-Copy and replace the file(s) from server-folder in your dayz_server.pbo. If you use other folderstructures/filenames, change the given paths.
+Copy and replace the file(s) from dayz code in your mission files.
+Copy and replace the file(s) from server-folder in your dayz_server.pbo. 
+If you use other folderstructures/filenames, change the given paths.
  
 
-in description.ext add at bottom ...
+in description.ext add at bottom .
 #include "dayz_code\config\RscDisplaySpawnSelecter.hpp"
- 
+
  
 in init.sqf add to listed variables
 dayz_spawnselection = 1; // DayZ Spawnselection / 1 = enabled // 0 = disabled, No current spawn limits.
