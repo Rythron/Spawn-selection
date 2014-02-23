@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "C:\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, DayZ Player Monitor">*/
+/*%FSM<COMPILE "C:\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, DayZ Player Monitor with Spawn Selection">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-75.000000,-350.000000,25.000000,-300.000000,0.000000,"init"};
@@ -45,9 +45,9 @@ item40[] = {"Enable_Sim",2,250,-75.000000,-100.000000,25.000000,-50.000000,0.000
 item41[] = {"Initialized",4,218,-175.000000,-150.000000,-75.000000,-100.000000,0.000000,"Initialized"};
 item42[] = {"New_Character",4,218,-325.000000,400.000000,-225.000000,450.000000,5.000000,"New" \n "Character"};
 item43[] = {"Gender_Selection",2,250,-575.000000,400.000000,-475.000000,450.000000,0.000000,"Gender Selection" \n "Dialog"};
-item44[] = {"Selected",4,218,-575.000000,475.000000,-475.000000,525.000000,0.000000,"Selected"};
-item45[] = {"Process",2,250,-575.000000,550.000000,-475.000000,600.000000,0.000000,"Process"};
-item46[] = {"no_PlayerID",4,4314,50.000000,-100.000000,150.000000,-50.000000,2.000000,"no PlayerID"};
+item44[] = {"Selected",4,218,-725.000000,400.000000,-625.000000,450.000000,0.000000,"Selected"};
+item45[] = {"Process",2,250,-875.000000,400.000000,-775.000000,450.000000,0.000000,"Process"};
+item46[] = {"no_PlayerID",4,218,50.000000,-100.000000,150.000000,-50.000000,2.000000,"no PlayerID"};
 item47[] = {"ERROR__No_Player_1",2,250,175.000000,-100.000000,275.000000,-50.000000,0.000000,"ERROR:" \n "No PlayerID"};
 item48[] = {"Too_Long",4,218,300.000000,-100.000000,400.000000,-50.000000,0.000000,"Too" \n "Long"};
 item49[] = {"Stream",2,250,-75.000000,900.000000,25.000000,950.000000,0.000000,"Stream"};
@@ -80,15 +80,15 @@ item75[] = {"",7,210,871.000000,521.000000,879.000000,529.000000,0.000000,""};
 item76[] = {"",7,210,871.000000,170.999985,879.000000,179.000015,0.000000,""};
 item77[] = {"",7,210,871.000000,-79.000000,879.000000,-71.000000,0.000000,""};
 item78[] = {"",7,210,871.000000,271.000000,879.000000,279.000000,0.000000,""};
-item79[] = {"Spawn_Selection_1",4,218,-950.000000,500.000000,-850.000000,550.000000,0.000000,"Spawn Selection Disabled"};
-item80[] = {"Spawn_Selection",4,218,-950.000000,600.000000,-850.000000,650.000000,0.000000,"Spawn Selection Enabled"};
-item81[] = {"Region_Selection",2,250,-825.000000,600.000000,-725.000000,650.000000,0.000000,"Region Selection" \n "Dialog"};
-item82[] = {"Process_1",2,250,-650.000000,500.000000,-550.000000,550.000000,0.000000,"Process"};
-item83[] = {"Selected",4,218,-700.000000,600.000000,-600.000000,650.000000,0.000000,"Selected"};
-item84[] = {"Process_2",2,250,-550.000000,600.000000,-450.000000,650.000000,0.000000,"Process"};
-item85[] = {"",7,210,-1004.000000,621.000000,-996.000000,629.000000,0.000000,""};
-item86[] = {"",7,210,-1004.000000,521.000000,-996.000000,529.000000,0.000000,""};
-item87[] = {"",7,210,-1004.000000,421.000000,-996.000000,429.000000,0.000000,""};
+item79[] = {"Process_1",2,250,-875.000000,500.000000,-775.000000,550.000000,0.000000,"Process"};
+item80[] = {"Region_Selection",2,250,-875.000000,600.000000,-775.000000,650.000000,0.000000,"Region Selection " \n "Dialog"};
+item81[] = {"Spawn_Selection_1",4,218,-1050.000000,500.000000,-925.000000,550.000000,0.000000,"Spawn Selection " \n "Disabled"};
+item82[] = {"Spawn_Selection",4,218,-1050.000000,600.000000,-925.000000,650.000000,0.000000,"Spawn Selection" \n "Enabled"};
+item83[] = {"Selected",4,218,-725.000000,600.000000,-625.000000,650.000000,0.000000,"Selected"};
+item84[] = {"Process_2",2,250,-575.000000,600.000000,-475.000000,650.000000,0.000000,"Process"};
+item85[] = {"",7,210,-1129.000000,621.000000,-1121.000000,629.000000,0.000000,""};
+item86[] = {"",7,210,-1129.000000,521.000000,-1121.000000,529.000000,0.000000,""};
+item87[] = {"",7,210,-1129.000000,421.000000,-1121.000000,429.000000,0.000000,""};
 link0[] = {0,1};
 link1[] = {0,5};
 link2[] = {1,2};
@@ -142,7 +142,7 @@ link49[] = {41,40};
 link50[] = {42,43};
 link51[] = {43,44};
 link52[] = {44,45};
-link53[] = {45,71};
+link53[] = {45,87};
 link54[] = {46,47};
 link55[] = {47,48};
 link56[] = {48,77};
@@ -178,22 +178,22 @@ link85[] = {75,57};
 link86[] = {76,78};
 link87[] = {77,76};
 link88[] = {78,57};
-link89[] = {79,82};
-link90[] = {80,81};
-link91[] = {81,83};
-link92[] = {82,71};
+link89[] = {79,71};
+link90[] = {80,83};
+link91[] = {81,79};
+link92[] = {82,80};
 link93[] = {83,84};
 link94[] = {84,71};
-link95[] = {85,80};
-link96[] = {86,79};
+link95[] = {85,82};
+link96[] = {86,81};
 link97[] = {86,85};
 link98[] = {87,86};
-globals[] = {25.000000,1,0,0,0,640,480,1,143,6316128,1,-400.773193,754.994873,294.455383,-631.582458,1137,911,1};
-window[] = {2,-1,-1,-1,-1,958,200,1478,200,3,1155};
+globals[] = {25.000000,1,0,0,0,640,480,1,153,6316128,1,-1318.423096,580.106201,1361.393921,-378.924561,972,891,1};
+window[] = {2,-1,-1,-1,-1,983,225,1503,225,3,990};
 *//*%FSM</HEAD>*/
 class FSM
 {
-  fsmName = "DayZ Player Monitor";
+  fsmName = "DayZ Player Monitor with Spawn Selection";
   class States
   {
     /*%FSM<STATE "init">*/
@@ -737,6 +737,7 @@ class FSM
        "dayzPlayerLogin2 = [];" \n
        "//[""PVDZE_plr_Login2"",[_charID,player,_playerUID]] call callRpcProcedure;" \n
        "" \n
+       "//PVDZE_plr_Login2 = [_charID,player,_playerUID];" \n
        "PVDZE_plr_Login2 = [_charID,player,_playerUID,_spawnSelection];" \n
        "publicVariableServer ""PVDZE_plr_Login2"";" \n
        "" \n
@@ -1360,7 +1361,6 @@ class FSM
        "_myEpoch = getText(configFile >> ""CfgPatches"" >> ""dayz_epoch"" >> ""dayzVersion"");" \n
        "_myEpochB = getText(configFile >> ""CfgPatches"" >> ""dayz_epoch_b"" >> ""dayzVersion"");" \n
        "_myEpochSfx = getText(configFile >> ""CfgPatches"" >> ""dayz_sfx"" >> ""dayzVersion"");" \n
-
        "_myEpochDayZ = getText(configFile >> ""CfgPatches"" >> ""dayz"" >> ""dayzVersion"");" \n
        "" \n
        "player enableSimulation true;"/*%FSM</STATEINIT""">*/;
@@ -1373,7 +1373,7 @@ class FSM
           priority = 2.000000;
           to="ERROR__No_Player_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-           condition=/*%FSM<CONDITION""">*/"(_myEpochAnim != ""1.0.4.2"") || (_myEpoch != ""1.0.4.2"") || (_myEpochB != ""1.0.4.2"") || (_myEpochSfx != ""1.0.4.2"") || (_myEpochDayZ != ""1.0.4.2"")"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_myEpochAnim != ""1.0.4.2"") || (_myEpoch != ""1.0.4.2"") || (_myEpochB != ""1.0.4.2"") || (_myEpochSfx != ""1.0.4.2"") || (_myEpochDayZ != ""1.0.4.2"")"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1673,7 +1673,29 @@ class FSM
       name = "Player_Zombie__S";
       init = /*%FSM<STATEINIT""">*/"_zssupported = [""pz_policeman"",""pz_suit1"",""pz_suit2"",""pz_worker1"",""pz_worker2"",""pz_worker3"",""pz_doctor"",""pz_teacher"",""pz_hunter"",""pz_villager1"",""pz_villager2"",""pz_villager3"",""pz_priest""];" \n
        "_model =  (_zssupported select floor(random(count _zssupported)));" \n
-       "freshSpawn = 1;"/*%FSM</STATEINIT""">*/;
+       "freshSpawn = 1;" \n
+       "dayz_selectRegion = 9;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Hive_Ok">*/
+        class Hive_Ok
+        {
+          priority = 0.000000;
+          to="Phase_One";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Process_1">*/
+    class Process_1
+    {
+      name = "Process_1";
+      init = /*%FSM<STATEINIT""">*/"dayz_selectRegion = 9;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -1708,27 +1730,6 @@ class FSM
           to="Process_2";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"!dialog"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Process_1">*/
-    class Process_1
-    {
-      name = "Process_1";
-      init = /*%FSM<STATEINIT""">*/"dayz_selectRegion = 9;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "Hive_Ok">*/
-        class Hive_Ok
-        {
-          priority = 0.000000;
-          to="Phase_One";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
