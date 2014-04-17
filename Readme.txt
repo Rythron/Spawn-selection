@@ -17,6 +17,11 @@ added folders and files (content of zip-archive)
   - player_monitor.sqf
  
 ------------------
+
+Credits
+-------
+TheVisad - Code 
+Joe Horan - Picture and design
  
 download the attached zip-archive  and extract the file(s) from client-folder into your missionfolder. 
 Copy and replace the file(s) from server-folder in your dayz_server.pbo. If you use other folderstructures/filenames, change the given paths.
